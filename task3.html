@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=6">
+    <script src="jquery-3.7.1.min.js"></script>
+
+ 
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+}
+
+.signup-form h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.social-container {
+    margin-bottom: 20px;
+}
+
+.social-container a {
+    display: inline-block;
+    margin: 0 8px;
+    color: #fff;
+    background-color: #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.social-container a:hover {
+    background-color: #2196F3;
+}
+
+span {
+    font-size: 13px;
+    color: #888;
+    display: block;
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+}
+
+button {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+     display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+
+button:hover {
+    background-color: #0b7dda;
+}
+
+
+</style>
+
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <form action="" method="">
+            <h1>Sign In</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" name="user" placeholder="UserName"  />
+            <input type="password" name="password" placeholder="Password" />
+            <p class="error" style="color:red;"></p>
+
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+            <p style="margin-top: 15px;">Don't have an account? <a href="signup.php">Sign Up</a></p>
+        </form>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+    $('form').submit(function(e){
+        let username = $('input[name="user"]').val();
+        let password = $('input[name="password"]').val();
+
+        if(username === '' || password === '') {
+            e.preventDefault(); 
+        } else {
+            $('.error').text('Please fill in all fields'); 
+            $('.error').text(''); 
+        }
+    });
+});
+</script>
+
+</body>
+</html>

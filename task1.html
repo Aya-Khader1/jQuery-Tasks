@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        p{
+            display: none;
+            font-size: 20px;
+            margin: 10px;
+            color: #676767;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: rgb(78, 131, 184);
+            
+        }
+    </style>
+</head>
+<body>
+    <button>Click Here</button>
+    <p>This is a paragraph</p>
+</body>
+<script>
+   $("button").click(function(){
+    $("p").toggle();
+
+   })
+</script>
+</html>
